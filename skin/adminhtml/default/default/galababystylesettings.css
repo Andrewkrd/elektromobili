@@ -1,0 +1,20 @@
+/**
+ * EMThemes
+ *
+ * @license commercial software
+ * @copyright (c) 2012 Codespot Software JSC - EMThemes.com. (http://www.emthemes.com)
+ */
+
+.galababystyle_header_head_bg_image img, .galababystyle_body_bd_bg_image img, .galababystyle_footer_foot_bg_image img { width:30px; height:30px; border:2px solid #ffffff }
+.galababystyle_header_head_bg_image:hover img,
+.galababystyle_header_head_bg_image.selected img,
+.galababystyle_body_bd_bg_image:hover img,
+.galababystyle_body_bd_bg_image.selected img,
+.galababystyle_footer_foot_bg_image:hover img,
+.galababystyle_footer_foot_bg_image.selected img { border:2px solid #000000 }
+
+.color_pattern { display:inline-block; width:10px; height:10px; vertical-align:text-bottom; border:1px solid #333; }
+#row_galababystyle_menu_tm_label .scope-label, #row_galababystyle_menu_dm_label .scope-label, #row_galababystyle_button_btn1_label .scope-label, #row_galababystyle_button_btn2_label .scope-label, #row_galababystyle_button_btn3_label .scope-label{display:none}
+#row_galababystyle_menu_tm_label, #row_galababystyle_menu_dm_label, #row_galababystyle_button_btn1_label, #row_galababystyle_button_btn2_label, #row_galababystyle_button_btn3_label{font-weight:bold;margin-left: 0!important;margin-bottom:10px; border-bottom: 1px solid #3d3d3d;}
+#galababystyle_menu tr, #galababystyle_button tr {display: inline-block; margin-left:40px;}
+label[for=galababystyle_menu_tm_label],label[for=galababystyle_menu_dm_label], label[for=galababystyle_button_btn1_label],label[for=galababystyle_button_btn2_label], label[for=galababystyle_button_btn3_label]{color:red;font-size:15px;}

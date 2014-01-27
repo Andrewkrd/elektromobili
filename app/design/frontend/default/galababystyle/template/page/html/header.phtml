@@ -1,0 +1,94 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+?>
+<div class="em-header-container em-header-wrapper">
+    <div class="em-header container_24 em-header">
+        <div class="grid_13 f-left em-logo">
+            <?php //echo $this->getChildHtml('store_switcher') ?>
+            <?php //echo $this->getChildHtml('store_language') ?>
+            <?php echo $this->getChildHtml('header.currency') ?>            
+            <?php echo $this->getChildHtml('topLinks') ?>            
+            <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+        </div>
+        <div class="grid_11 f-right em-quick-access">
+            <div class="em-social-icon grid_3 alpha">
+                <div id="ok_shareWidget"></div>
+                    <div id="ok_shareWidget"></div>
+<script>
+!function (d, id, did, st) {
+  var js = d.createElement("script");
+  js.src = "http://connect.ok.ru/connect.js";
+  js.onload = js.onreadystatechange = function () {
+  if (!this.readyState || this.readyState == "loaded" || this.readyState == "complete") {
+    if (!this.executed) {
+      this.executed = true;
+      setTimeout(function () {
+        OK.CONNECT.insertShareWidget(id,did,st);
+      }, 0);
+    }
+  }};
+  d.documentElement.appendChild(js);
+}(document,"ok_shareWidget","http://dev.ok.ru","{width:145,height:25,st:'rounded',sz:20,ck:3}");
+</script>
+
+                
+				<div id="fb-root"></div>
+				<div class="facebook">
+					<script>(function(d, s, id) {
+					  var js, fjs = d.getElementsByTagName(s)[0];
+					  if (d.getElementById(id)) return;
+					  js = d.createElement(s); js.id = id;
+					  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+					  fjs.parentNode.insertBefore(js, fjs);
+					}(document, 'script', 'facebook-jssdk'));</script>
+					<?php $curr = 'data-href="'.$this->helper('core/url')->getCurrentUrl().'"'; ?>
+					<div class="fb-like" <?php echo $curr; ?> data-send="false" data-layout="button_count" data-width="150" data-show-faces="true"></div>
+				</div>
+                
+                <div class="twitter">
+    				<a href="https://twitter.com/share" class="twitter-share-button" >Tweet</a>
+    				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				</div>				
+			</div>
+            
+            <div class="grid_3 em-header-banner"><?php echo $this->getChildHtml('galababystyle_header_banner'); ?></div>
+            <div class="grid_3 em-top-cart omega"><?php echo $this->getChildHtml('cart_sidebar'); ?></div>
+        </div>
+        <div class="container_24 em-menu">
+            
+            <div class="grid_6 f-right"><?php echo $this->getChildHtml('topSearch') ?></div>
+            <div class="grid_18 f-left alpha">
+                <?php echo $this->getChildHtml('topMenu') ?>
+                <?php echo $this->getChildHtml('galababystyle_megamenu') ?>
+            </div>
+            <?php echo $this->getChildHtml('topContainer'); ?>
+        </div>        
+    </div>
+</div>
+

@@ -1,0 +1,16 @@
+.header_banner .containner h1{color:#fff!important;}
+.header_banner .containner{border:1px dashed #f8be7f;}
+.form-search{box-shadow:none;}
+
+/*View mode*/
+.view-mode .grid, .view-mode .list {  display:inline-block; height: 14px; margin-top:0; 
+text-indent: -9999px; width: 15px; float: left;   background: url("../images/icons_4.png") no-repeat scroll 0 0 transparent;
+-moz-transition: all 400ms ease; 
+-webkit-transition: all 400ms ease; 
+-o-transition: all 400ms ease; 
+transition: all 400ms ease;}
+.view-mode strong.grid{ background-position:0 0;}
+.view-mode .grid:hover  { background-position:0 0;}
+.view-mode strong.list,.view-mode .list:hover {  background-position: -15px -21px;}
+.view-mode .grid {background-position:0 -21px; }
+.view-mode .list{ background-position:-15px 0;  overflow: hidden;}

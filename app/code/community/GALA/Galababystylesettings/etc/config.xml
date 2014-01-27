@@ -1,0 +1,317 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <GALA_Galababystylesettings>
+            <version>0.1.0</version>
+        </GALA_Galababystylesettings>
+    </modules>
+	 <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <galababystyle>
+                                            <title>Image Configure</title>
+                                        </galababystyle>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <layout>
+            <updates>
+				<galababystylesettings>
+					<file>galababystylesettings.xml</file>
+				</galababystylesettings>
+            </updates>
+        </layout>
+		<menu>
+			<emthemes translate="title">
+				<title>Galathemes</title>
+				<sort_order>72</sort_order>
+				<children>
+					<galababystyle_setting module="galababystylesettings" translate="title">
+						<title>Gala Babystyle Settings</title>
+						<sort_order>10</sort_order>
+						<action>adminhtml/system_config/edit/section/galababystyle/</action>
+					</galababystyle_setting>
+					<help module="galababystylesettings" translate="title">
+						<title>Help &amp; Support</title>
+						<sort_order>200</sort_order>
+						<children>
+							<galababystyle_userguide module="galababystylesettings" translate="title">
+								<title>Gala Babystyle User Guide</title>
+								<sort_order>10</sort_order>
+								<action>adminhtml/galababystylesettings_link/faqs/</action>
+							</galababystyle_userguide>
+							<forum module="galababystylesettings" translate="title">
+                                <title>Request installation</title>
+                                <sort_order>20</sort_order>
+                                <action>adminhtml/galababystylesettings_link/requestinstallation/</action>
+                            </forum>
+                            <ticket module="galababystylesettings" translate="title">
+                                <title>Technical support</title>
+                                <sort_order>30</sort_order>
+                                <action>adminhtml/galababystylesettings_link/technicalsupport/</action>
+                            </ticket>                            
+                            <contact_us module="galababystylesettings" translate="title">
+                                <title>Contact Us</title>
+                                <sort_order>30</sort_order>
+                                <action>adminhtml/galababystylesettings_link/contactus/</action>
+                            </contact_us>
+						</children>
+					</help>
+				</children>
+			</emthemes>
+		</menu>
+    </adminhtml>
+
+    <frontend>
+        <routers>
+            <galababystylesettings>
+                <use>standard</use>
+                <args>
+                    <module>GALA_Galababystylesettings</module>
+                    <frontName>galababystylesettings</frontName>
+                </args>
+            </galababystylesettings>
+        </routers>
+        <layout>
+            <updates>
+                <galababystylesettings>
+                    <file>galababystylesettings.xml</file>
+                </galababystylesettings>
+            </updates>
+        </layout>
+		<events>
+    		<controller_action_layout_generate_blocks_before>
+    			<observers>
+    				<galababystyle_config_after_save>
+    					<class>GALA_Galababystylesettings_Model_Observer</class>
+    					<method>beforeGenerateBlocks</method> 
+    				</galababystyle_config_after_save>
+    			</observers>
+    		</controller_action_layout_generate_blocks_before>		
+			<catalog_product_collection_load_before>
+    			<observers>
+    				<galababystylesettings>
+    					<class>GALA_Galababystylesettings_Model_Observer</class>
+    					<method>beforeCatalogProductCollectionLoad</method> 
+    				</galababystylesettings>
+    			</observers>
+    		</catalog_product_collection_load_before>
+    	</events>
+    </frontend>
+    <admin>
+		<routers>
+			<adminhtml>
+				<args>
+					<modules>
+						<galababystylesettings before="Mage_Adminhtml">GALA_Galababystylesettings_Adminhtml</galababystylesettings>
+					</modules>
+				</args>
+			</adminhtml>
+		</routers>
+    </admin>
+    <adminhtml>
+		
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<GALA_Galababystylesettings>
+							<title>galababystylesettings Module</title>
+							<sort_order>10</sort_order>
+						</GALA_Galababystylesettings>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+		<layout>
+			<updates>
+				<galababystylesettings>
+					<file>galababystylesettings.xml</file>
+				</galababystylesettings>
+			</updates>
+		</layout>
+        <events>
+    		<controller_action_postdispatch_adminhtml_system_config_save>
+    			<observers>
+    				<galababystyle_config_after_save>
+    					<class>GALA_Galababystylesettings_Model_Observer</class>
+    					<method>afterConfigSave</method> 
+    				</galababystyle_config_after_save>
+    			</observers>
+    		</controller_action_postdispatch_adminhtml_system_config_save>		
+    	</events> 
+    </adminhtml>
+    
+    <global>
+        <models>
+            <galababystylesettings>
+                <class>GALA_Galababystylesettings_Model</class>
+                <resourceModel>galababystylesettings_mysql4</resourceModel>
+            </galababystylesettings>
+            <galababystylesettings_mysql4>
+                <class>GALA_Galababystylesettings_Model_Mysql4</class>
+                <entities>
+                    <galababystylesettings>
+                        <table>galababystylesettings</table>
+                    </galababystylesettings>
+					<megamenupro>
+                        <table>megamenupro</table>
+                    </megamenupro>
+                    <media>
+                        <table>em_slideshow2_media</table>
+                    </media>
+					<slider>
+                        <table>em_slideshow2_slider</table>
+                    </slider>
+                </entities>
+            </galababystylesettings_mysql4>
+        </models>
+        <resources>
+            <galababystylesettings_setup>
+                <setup>
+                    <module>GALA_Galababystylesettings</module>
+					<class>Mage_Eav_Model_Entity_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </galababystylesettings_setup>
+            <galababystylesettings_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </galababystylesettings_write>
+            <galababystylesettings_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </galababystylesettings_read>
+        </resources>
+        <blocks>
+            <galababystylesettings>
+                <class>GALA_Galababystylesettings_Block</class>
+            </galababystylesettings>
+        </blocks>
+        <helpers>
+            <galababystylesettings>
+                <class>GALA_Galababystylesettings_Helper</class>
+            </galababystylesettings>
+			<catalog>
+				<rewrite>
+					<image>GALA_Galababystylesettings_Helper_CatalogImage</image>
+				</rewrite>
+			</catalog>
+        </helpers>
+    </global>
+	<default>
+		<galababystyle>
+			<general>
+				<disable_default_nav>0</disable_default_nav>
+				<freezed_top_menu>0</freezed_top_menu>
+				<disable_frontend_variation>1</disable_frontend_variation>
+				<disable_footer_links>0</disable_footer_links>
+                <disable_social>0</disable_social>
+			</general>
+            <typography>
+                <google_fonts>Droid Sans</google_fonts>
+				<general_font>normal 12px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif</general_font>
+				<h1_font>500 22px/1.25 "Droid Sans", "Helvetica Neue", helvetica,arial,sans-serif</h1_font>
+				<h2_font>500 20px/1.25 "Droid Sans", "Helvetica Neue", helvetica,arial,sans-serif</h2_font>
+				<h3_font>500 18px/1.25 "Droid Sans", "Helvetica Neue", helvetica,arial,sans-serif</h3_font>
+				<h4_font>500 16px/1.35 "Droid Sans", "Helvetica Neue", helvetica,arial,sans-serif</h4_font>
+				<h5_font>500 14px/1.35 "Droid Sans", "Helvetica Neue", helvetica,arial,sans-serif</h5_font>
+                <h6_font>500 12px/1.55 "Droid Sans", "Helvetica Neue", helvetica,arial,sans-serif</h6_font>
+                <additional_css_file></additional_css_file>
+                <custom_css></custom_css>
+            </typography>
+			<header>
+                <head_text_color></head_text_color>
+                <head_text2_color></head_text2_color>
+                <head_bg_color></head_bg_color>
+                <head_bg2_color></head_bg2_color>
+                <head_bg3_color></head_bg3_color>
+                <head_bg_image></head_bg_image>
+                <head_bg_file></head_bg_file>
+                <head_bg_position></head_bg_position>
+                <head_bg_repeat></head_bg_repeat>
+             </header>
+             <menu>
+                <tm_bg_color></tm_bg_color>
+                <tm_hover_bg_color></tm_hover_bg_color>
+                <tm_text_color></tm_text_color>
+                <tm_hover_text_color></tm_hover_text_color>
+                <tm_font></tm_font>
+                <dm_bg_color></dm_bg_color>
+                <!--dm_hover_bg_color></dm_hover_bg_color-->
+                <dm_text_color></dm_text_color>
+                <dm_hover_text_color></dm_hover_text_color>
+                <dm_font></dm_font>
+            </menu>
+            <body>
+                <bd_bg_color></bd_bg_color>
+                <bd_bg2_color></bd_bg2_color>
+                <bd_bg_image></bd_bg_image>
+                <bd_bg_position></bd_bg_position>
+                <bd_bg_repeat></bd_bg_repeat>                
+                <bd_text_color></bd_text_color>
+                <bd_text2_color></bd_text2_color>
+                <bd_text3_color></bd_text3_color>
+                <bd_line_color></bd_line_color>
+                <bd_line2_color></bd_line2_color>                
+                <bd_box_shadow></bd_box_shadow>
+                <bd_box2_shadow></bd_box2_shadow>	
+                <bd_rounded_corner></bd_rounded_corner>
+            </body>            
+            <footer>
+                <foot_bg_color></foot_bg_color>
+                <foot_bg_image></foot_bg_image>
+                <foot_bg_position></foot_bg_position>
+                <foot_bg_repeat></foot_bg_repeat>
+                <foot_text_color></foot_text_color>
+                <foot_text2_color></foot_text2_color>
+                <foot_text3_color></foot_text3_color>
+            </footer>
+            <button>
+                <btn1_bg_color></btn1_bg_color>
+                <btn1_text_color></btn1_text_color>
+                <btn1_line_color></btn1_line_color>
+                <btn1_font></btn1_font>
+                <btn2_bg_color></btn2_bg_color>
+                <btn2_text_color></btn2_text_color>
+                <btn2_line_color></btn2_line_color>
+                <btn2_font></btn2_font>
+                <btn3_bg_color></btn3_bg_color>
+                <btn3_text_color></btn3_text_color>
+                <btn3_line_color></btn3_line_color>
+                <btn3_font></btn3_font>
+            </button>
+            <products_grid>
+            </products_grid>
+            <products_list>
+            </products_list>            
+			<image_product>
+				<viewmode></viewmode>
+				<cloud_zoom_width></cloud_zoom_width>
+				<cloud_zoom_height></cloud_zoom_height>
+                <use_tabs>1</use_tabs>
+			</image_product>
+			<ajaxcart>
+				<auto_close>0</auto_close>
+			</ajaxcart>
+		</galababystyle>
+	</default>
+</config>

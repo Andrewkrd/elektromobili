@@ -1,0 +1,93 @@
+/* HIEP */
+font: /*BEGIN:general_font*/normal 12px/1.35 Arial, Helvetica, sans-serif/*END:general_font*/;
+font:/*BEGIN:h1_font*/normal 22px/1.15 helvetica,arial,sans-serif /*END:h1_font*/;
+font:/*BEGIN:h2_font*/ normal 20px/1.25 helvetica,arial,sans-serif/*END:h2_font*/;
+font:/*BEGIN:h3_font*/normal 18px/1.25 helvetica,arial,sans-serif /*END:h3_font*/;
+font:/*BEGIN:h4_font*/normal 16px/1.35 helvetica,arial,sans-serif /*END:h4_font*/;
+font:/*BEGIN:h5_font*/normal 14px/1.35 helvetica,arial,sans-serif /*END:h5_font*/;
+font:/*BEGIN:h6_font*/normal 12px/1.35 helvetica,arial,sans-serif /*END:h6_font*/;
+
+/* Header */
+color:/*BEGIN:h_text_color*/#747474/*END:h_text_color*/; text general
+color:/*BEGIN:h_text2_color*/#41A1E5/*END:h_text2_color*/;text hover 
+background-color:/*BEGIN:h_bg_color*/#fff/*END:h_bg_color*/;
+background-color:/*BEGIN:h_bg2_color*/#D2F1F4/*END:h_bg2_color*/;
+background-color:/*BEGIN:h_bg3_color*/#efefef/*END:h_bg3_color*/;
+background-image: /*BEGIN:h_bg_image*/url(../images/stripes/blank.gif)/*END:h_bg_image*/;
+background-position: /*BEGIN:h_bg_position*/0 0/*END:h_bg_position*/;
+background-repeat: /*BEGIN:h_bg_repeat*/repeat/*END:h_bg_repeat*/;
+
+/* Top Menu */
+background-color:/*BEGIN:tm_bg_color*/#fff/*END:tm_bg_color*/;
+background-color:/*BEGIN:tm_hover_bg_color*/#3791d0/*END:tm_hover_bg_color*/;
+color:/*BEGIN:tm_text_color*/#8b8c8f/*END:tm_text_color*/;
+color:/*BEGIN:tm_hover_text_color*/#ffffff/*END:tm_hover_text_color*/ ;
+font:/*BEGIN:tm_font*/normal 14px/1.35 helvetica,arial,sans-serif /*END:tm_font*/;
+
+/* Drop Menu */
+background:/*BEGIN:dm_bg_color*/#fff/*END:dm_bg_color*/;
+background:/*BEGIN:dm_hover_bg_color*/#efefef/*END:dm_hover_bg_color*/;
+color:/*BEGIN:dm_text_color*/#202020/*END:dm_text_color*/; menu text 
+color:/*BEGIN:dm_hover_text_color*/#7d7778/*END:dm_hover_text_color*/;
+font:/*BEGIN:dm_font*/normal 12px/1.35 Arial, Helvetica, sans-serif/*END:dm_font*/;
+
+/* Body */
+background-color:/*BEGIN:bd_bg_color*/#fff/*END:bd_bg_color*/;
+background-color:/*BEGIN:bd_bg2_color*/#f0f0f0/*END:bd_bg2_color*/;
+background-image: /*BEGIN:bd_bg_image*/url(../images/stripes/partern.png)/*END:bd_bg_image*/;
+background-position:/*BEGIN:bd_bg_position*/0 0/*END:bd_bg_position*/;
+background-repeat:/*BEGIN:bd_bg_repeat*/repeat/*END:bd_bg_repeat*/;
+
+color:/*BEGIN:bd_text_color*/#343434/*END:bd_text_color*/; // product name
+color:/*BEGIN:bd_text2_color*/#666/*END:bd_text2_color*/; //body text
+color:/*BEGIN:bd_text3_color*/ #389be0 /*END:bd_text3_color*/; //gia, title block;
+
+border: 1px solid /*BEGIN:bd_line_color*/ #e0e0e0/*END:bd_line_color*/;
+border: 1px solid /*BEGIN:bd_line2_color*/ #9e9e9e/*END:bd_line2_color*/;
+
+box-shadow:/*BEGIN:bd_box_shadow*/ 0 0 5px #e0e0e0/*END:bd_box_shadow*/ ;
+-moz-box-shadow:/*BEGIN:bd_box_shadow*/ 0 0 5px #e0e0e0/*END:bd_box_shadow*/ ;
+-webkit-box-shadow: /*BEGIN:bd_box_shadow*/0 0 5px #e0e0e0/*END:bd_box_shadow*/ ;
+
+box-shadow:/*BEGIN:bd_box2_shadow*/ 0 1px 2px #e0e0e0 inset/*END:bd_box2_shadow*/ ;
+-moz-box-shadow:/*BEGIN:bd_box2_shadow*/ 0 1px 2px #e0e0e0 inset/*END:bd_box2_shadow*/ ;
+-webkit-box-shadow: /*BEGIN:bd_box2_shadow*/0 1px 2px #e0e0e0 inset/*END:bd_box2_shadow*/ ;
+
+border-radius:/*BEGIN:bd_rounded_corner*/ 3px/*END:bd_rounded_corner*/;
+-webkit-border-radius: /*BEGIN:bd_rounded_corner*/ 3px/*END:bd_rounded_corner*/;
+-moz-border-radius:/*BEGIN:bd_rounded_corner*/ 3px/*END:bd_rounded_corner*/;
+
+/* Footer */
+background-color:/*BEGIN:f_bg_color*/#fff/*END:f_bg_color*/;
+background-image: /*BEGIN:f_bg_image*/url(../images/stripes/blank.gif)/*END:f_bg_image*/;
+background-position:/*BEGIN:f_bg_position*/0 0/*END:f_bg_position*/;
+background-repeat:/*BEGIN:f_bg_repeat*/repeat/*END:f_bg_repeat*/;
+color:/*BEGIN:f_text_color*/#1f1f1f/*END:f_text_color*/;
+color:/*BEGIN:f_text2_color*/#666/*END:f_text2_color*/;
+color:/*BEGIN:f_text3_color*/ #41a1e5 /*END:f_text3_color*/;
+
+/* Button */ 
+/* button add to cart*/
+background:/*BEGIN:btn1_bg_color*/#389be0/*END:btn1_bg_color*/ url(../images/gradient2.png) repeat-x scroll 0 bottom;
+color:/*BEGIN:btn1_text_color*/#fff/*END:btn1_text_color*/;
+border: 1px solid /*BEGIN:btn1_line_color*/ #265678/*END:btn1_line_color*/;
+font:/*BEGIN:btn1_font*/normal 12px/1.35 Arial, Helvetica, sans-serif/*END:btn1_font*/;
+
+background:/*BEGIN:btn2_bg_color*/#fa9f45/*END:btn2_bg_color*/ url(../images/gradient2.png) repeat-x scroll 0 bottom;
+color:/*BEGIN:btn2_text_color*/#fff/*END:btn2_text_color*/;
+border: 1px solid/*BEGIN:btn2_line_color*/ #ea7f14/*END:btn2_line_color*/;
+font:/*BEGIN:btn2_font*/normal 12px/1.35 Arial, Helvetica, sans-serif/*END:btn2_font*/;
+
+/*button add to cart in homepage*/
+background:/*BEGIN:btn3_bg_color*/#f7f7f7/*END:btn3_bg_color*/ url(../images/gradient2.png) repeat-x scroll 0 bottom;
+color:/*BEGIN:btn3_text_color*/#575757/*END:btn3_text_color*/;
+border: 1px solid /*BEGIN:btn3_line_color*/ #bababa/*END:btn3_line_color*/;
+font:/*BEGIN:btn3_font*/normal 12px/1.35 helvetica,arial,sans-serif /*END:btn3_font*/;
+
+
+
+/*border radius*/
+button
+#back-top
+.link-top-cart
+.products-grid li.item
