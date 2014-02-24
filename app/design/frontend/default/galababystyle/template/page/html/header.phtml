@@ -77,6 +77,11 @@
 				</div>				
 			</div>
             
+<div id="vk_like"></div>
+<script type="text/javascript">
+VK.Widgets.Like("vk_like", {type: "mini", height: 20});
+</script>
+            
             <div class="grid_3 em-header-banner"><?php echo $this->getChildHtml('galababystyle_header_banner'); ?></div>
             <div class="grid_3 em-top-cart omega"><?php echo $this->getChildHtml('cart_sidebar'); ?></div>
         </div>
@@ -90,10 +95,7 @@
             <?php echo $this->getChildHtml('topContainer'); ?>
         </div>  
         
-        <div id="vk_like"></div>
-        <script type="text/javascript">
-        VK.Widgets.Like("vk_like", {type: "mini"});
-        </script>
+
         
     </div>
 </div>
