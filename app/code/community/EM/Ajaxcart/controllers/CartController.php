@@ -92,7 +92,7 @@ class EM_Ajaxcart_CartController extends Mage_Checkout_CartController
 			
             if (!$this->_getSession()->getNoCartRedirect(true)) {
                 if (!$cart->getQuote()->getHasError()){
-                    $message = $this->__('%s was successfully added to your shopping cart.', $product->getName());
+                    $message = $this->__('%s добавлен в корзину .', $product->getName());
 					$img = "<img src='".Mage::helper('catalog/image')->init($product, 'image')->resize(60,null)."' />";
 					$tmp_product = '<div id="message_ajax"><div class="ajaxcart_image">'.$img.'</div><div class="ajaxcart_message">'.$message.'</div></div>';
 					$check = 'success';					
@@ -106,7 +106,7 @@ class EM_Ajaxcart_CartController extends Mage_Checkout_CartController
                 $tmp_product	=	'<div id="message_ajax">'.Mage::helper('core')->escapeHtml($e->getMessage()).'</div>';
             }
         } catch (Exception $e) {
-            $this->_getSession()->addException($e, $this->__('Cannot add the item to shopping cart.'));
+            $this->_getSession()->addException($e, $this->__('Невозможно добавить товар в корзину.'));
             Mage::logException($e);
         }
 
@@ -150,7 +150,7 @@ class EM_Ajaxcart_CartController extends Mage_Checkout_CartController
 						 $tmp_product	=	'<div id="message_ajax">'.Mage::helper('core')->escapeHtml($e->getMessage()).'</div>';
                     }
                 } catch (Exception $e) {
-                    $this->_getSession()->addException($e, $this->__('Cannot add the item to shopping cart.'));
+                    $this->_getSession()->addException($e, $this->__('Невозможно добавить товар в корзину.'));
                     Mage::logException($e);
                     $this->_goBack();
                 }
@@ -158,7 +158,7 @@ class EM_Ajaxcart_CartController extends Mage_Checkout_CartController
             if($cart->save()){
 				$this->_getSession()->setCartWasUpdated(true);
 				
-				$message = $this->__('Total of %d product(s) were successfully added to your shopping cart.', count($itemsCollection));
+				$message = $this->__('Всего %d product(s) добавлено в корзину.', count($itemsCollection));
 				$check = 'success';
 				$tmp_product	=	'<div id="message_ajax">'.$message.'</div>';
 			}
@@ -190,7 +190,7 @@ class EM_Ajaxcart_CartController extends Mage_Checkout_CartController
                 Mage::getSingleton('checkout/cart')->removeItem($id)
                   ->save();
             } catch (Exception $e) {
-               Mage::getSingleton('checkout/cart')->addError($this->__('Cannot remove item'));
+               Mage::getSingleton('checkout/cart')->addError($this->__('Невозможно удалить товар'));
             }
         }
 		$backUrl = $this->_getRefererUrl();
@@ -257,7 +257,7 @@ class EM_Ajaxcart_CartController extends Mage_Checkout_CartController
             if (!$this->_getSession()->getNoCartRedirect(true)) {
                 if (!$cart->getQuote()->getHasError()){
 					$product = $item->getProduct();
-                    $message = $this->__('%s was successfully added to your shopping cart.', $product->getName());					
+                    $message = $this->__('%s добавлен в корзину.', $product->getName());					
 					$img = "<img src='".Mage::helper('catalog/image')->init($product, 'image')->resize(60,null)."' />";
 					$tmp_product = '<div id="message_ajax"><div class="ajaxcart_image">'.$img.'</div><div class="ajaxcart_message">'.$message.'</div></div>';
 					$check = 'success';	
@@ -271,7 +271,7 @@ class EM_Ajaxcart_CartController extends Mage_Checkout_CartController
                 $tmp_product	=	'<div id="message_ajax">'.Mage::helper('core')->escapeHtml($e->getMessage()).'</div>';	
             }
 		} catch (Exception $e) {
-			Mage::register('ajaxcart_message',$this->__('Cannot update the item.'));
+			Mage::register('ajaxcart_message',$this->__('Невозможно обновить товар.'));
         }
 		$this->loadLayout();
 		$layout = $this->getLayout();
